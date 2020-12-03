@@ -58,7 +58,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
-    line-height: 2;
+    line-height: 2.2;
 }
 
 .logo-navbar .logo{
@@ -84,7 +84,6 @@ a{
 
 .playlist-navbar{
     flex-grow: 1;
-    padding: 15px 10px;
     min-height: 200px;
     overflow-y: auto;
 }
@@ -94,6 +93,17 @@ a{
     text-transform: uppercase;
     font-size: 0.95em;
     font-weight: 600;
+    padding: 10px 10px;
+}
+
+.playlist-navbar ul li a{
+    padding: 15px 10px;
+    opacity: 65%;
+}
+
+.playlist-navbar ul li a:hover{
+    border-left: 2px solid lime;
+    opacity: 100%;
 }
 
 .playlist-navbar ul li a.crea-playlist{
@@ -101,20 +111,65 @@ a{
 }
 
 .playlist-navbar ul li a.crea-playlist::before{
-    content: '+';
-    color: black;
-    font-size: 40px;
-    margin: 10px 0;
-    padding: 0 10px;
-    margin-right: 5px;
-    background-color: white;
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f067";
+    font-style: solid;
+    font-weight: 900;
     display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+    background-color: white;
+    font-size: 1.2em;
+    padding: 0 10px;
+    margin-right: 10px;
     vertical-align: middle;
 }
 
 .user-navbar{
     padding: 15px 10px;
 }
+
+.user-navbar a.install-app{
+    opacity: 65%;
+}
+
+.user-navbar a.install-app:hover{
+    opacity: 100%;
+}
+
+.user-navbar hr{
+    margin: 5px 0;
+}
+
+.user-navbar a.install-app::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0ab";
+    font-style: solid;
+    font-weight: 900;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    font-size: 1em;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.user-navbar a.user-logo:hover{
+    color: lime;
+}
+
+.user-navbar a.user-logo::before{ 
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f2bd";
+    font-style: solid;
+    font-weight: 900;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font-size: 2em;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
 /* /Barra Laterale */
 
 /* Main content */
