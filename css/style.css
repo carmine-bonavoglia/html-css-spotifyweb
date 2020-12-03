@@ -38,17 +38,83 @@ main{
     background-color: mediumturquoise;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
 /* /Classi riutilizzabili */
 
 /* Barra laterale */
 .left-bar{
     width: 250px;
-    height: 100%;
+    height: calc(100% - 100px);
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    line-height: 2;
 }
 
+.logo-navbar .logo{
+    width: 60%;
+    margin: 3%;
+}
+
+.menu-navbar ul li a{
+    padding: 15px 10px;
+    opacity: 65%;
+}
+
+.menu-navbar ul li a:hover{
+    border-left: 2px solid lime;
+    opacity: 100%;
+}
+
+.menu-navbar ul li a img{
+    width: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.playlist-navbar{
+    flex-grow: 1;
+    padding: 15px 10px;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+.playlist-navbar ul li p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.playlist-navbar ul li a.crea-playlist{
+    font-size: 0.90em;
+}
+
+.playlist-navbar ul li a.crea-playlist::before{
+    content: '+';
+    color: black;
+    font-size: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    margin-right: 5px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user-navbar{
+    padding: 15px 10px;
+}
 /* /Barra Laterale */
 
 /* Main content */
@@ -75,7 +141,7 @@ main{
 .button-upgrade{
     color: white;
     border: 1px solid white;
-    padding: 20px 30px;
+    padding: 10px 30px;
     border-radius: 20px;
     margin-right: 2%;
 }
@@ -89,6 +155,7 @@ main{
 a.button-upgrade{
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 0.8em;
 }
 
 /* /Main Content */
