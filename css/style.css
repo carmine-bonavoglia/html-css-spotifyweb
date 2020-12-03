@@ -66,6 +66,10 @@ a{
     margin: 3%;
 }
 
+.menu-navbar{
+    margin-bottom: 10px;
+}
+
 .menu-navbar ul li a{
     padding: 15px 10px;
     opacity: 65%;
@@ -82,13 +86,7 @@ a{
     vertical-align: middle;
 }
 
-.playlist-navbar{
-    flex-grow: 1;
-    min-height: 200px;
-    overflow-y: auto;
-}
-
-.playlist-navbar ul li p{
+.menu-navbar ul li p.title-playlist{
     color: white;
     text-transform: uppercase;
     font-size: 0.95em;
@@ -96,21 +94,11 @@ a{
     padding: 10px 10px;
 }
 
-.playlist-navbar ul li a{
-    padding: 15px 10px;
-    opacity: 65%;
-}
-
-.playlist-navbar ul li a:hover{
-    border-left: 2px solid lime;
-    opacity: 100%;
-}
-
-.playlist-navbar ul li a.crea-playlist{
+.menu-navbar ul li a.crea-playlist{
     font-size: 0.90em;
 }
 
-.playlist-navbar ul li a.crea-playlist::before{
+.menu-navbar ul li a.crea-playlist::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f067";
     font-style: solid;
@@ -123,6 +111,22 @@ a{
     padding: 0 10px;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.playlist-navbar{
+    flex-grow: 1;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+.playlist-navbar ul li a{
+    padding: 15px 10px;
+    opacity: 65%;
+}
+
+.playlist-navbar ul li a:hover{
+    border-left: 2px solid lime;
+    opacity: 100%;
 }
 
 .user-navbar{
@@ -179,6 +183,10 @@ a{
     margin-left: 250px;
     padding-top: 100px;
     overflow-y: scroll;
+    background-color: #141922;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .call-to-action{
@@ -213,6 +221,46 @@ a.button-upgrade{
     font-size: 0.8em;
 }
 
+.main-content .main-menu ul li{
+    display: inline-block;
+}
+
+.main-menu{
+    width: 100%;
+    text-align: center;
+}
+
+.main-menu ul{
+}
+
+.main-menu ul li{
+    padding: 20px 0px;
+    position: relative;
+}
+
+
+.main-menu ul li a{
+    text-transform: uppercase;
+    padding: 10px;
+    opacity: 65%;
+    margin-bottom: 10px;
+}
+
+.main-menu ul li a:hover{
+    opacity: 100%;
+}
+
+.main-menu ul li a:hover::after{
+    content:'';
+    width: 40px;
+    height: 2px;
+    background-color: lime;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
 /* /Main Content */
 
 /* Footer */
@@ -222,5 +270,34 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #282828;
 }
 /* /Footer */
+
+/* Media Query */
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+} 
+
+/* /Media Query */
