@@ -285,7 +285,6 @@ a.button-upgrade{
     font-size: 0.7em;
 }
 
-
 #last-played,
 #user,
 #popular{
@@ -309,12 +308,6 @@ a.button-upgrade{
     display: flex;
 }
 
-.cover-box{
-    width: calc(100% / 6 - 30px);
-    margin: 15px;
-    position: relative;
-}
-
 .cover-box img{
     width: 100%;
 }
@@ -331,10 +324,15 @@ a.button-upgrade{
     left: 0;
     font-size: 50px;
     color: white;
-    opacity: 100%;
+    opacity: 0%;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+}
+
+.layover-img:hover{
+    opacity: 100%;
+    background-color:  rgba(0, 0, 0, 0.75);
 }
 
 .layover-img .fas{
@@ -348,31 +346,6 @@ a.button-upgrade{
 .layover-img .fas:hover{
     opacity: 100%;
 }
-
-
-
-/* .cover-box img:hover::after{
-    content: "\f144";
-    display: block;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    color: white;
-    font-size: 5em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-
-    content:'';
-    width: 40px;
-    height: 2px;
-    background-color: lime;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 li .circle{
     border-radius: 50%;
