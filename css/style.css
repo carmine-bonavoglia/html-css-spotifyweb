@@ -113,8 +113,8 @@ a{
 
 .playlist-navbar{
     flex-grow: 1;
-    min-height: 200px;
-    overflow-y: auto;
+    min-height: 150px;
+    overflow-y: scroll;
 }
 
 .playlist-navbar ul li a{
@@ -311,7 +311,6 @@ a.button-upgrade{
 
 .cover-box{
     width: calc(100% / 6 - 30px);
-    height: 100%;
     margin: 15px;
     position: relative;
 }
@@ -320,11 +319,39 @@ a.button-upgrade{
     width: 100%;
 }
 
+.position-img{
+    position: relative;
+}
+
+.layover-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    color: white;
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.layover-img .fas{
+    height: 50px;
+}
+
 .cover-box img:hover{
     opacity: 30%;
 }
 
-.cover-box img:hover::after{
+.layover-img .fas:hover{
+    opacity: 100%;
+}
+
+
+
+/* .cover-box img:hover::after{
     content: "\f144";
     display: block;
     font-family: "Font Awesome 5 Free"; 
@@ -337,15 +364,15 @@ a.button-upgrade{
     transform: translate(-50%, -50%);
     z-index: 1;
 
-    /* content:'';
+    content:'';
     width: 40px;
     height: 2px;
     background-color: lime;
     position: absolute;
     top: 80%;
     left: 50%;
-    transform: translateX(-50%); */
-}
+    transform: translateX(-50%);
+} */
 
 li .circle{
     border-radius: 50%;
@@ -370,7 +397,22 @@ footer{
 /* Media Query */
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
-@media only screen and (max-width: 600px){
+@media only screen and (max-height: 350px){
+    .cover-box{
+        width: calc(100% / 1 - 30px);
+        margin: 15px;
+    }
+
+    .call-to-action{
+        display: none;
+    }
+
+    .main-content{
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) and (max-height: 350px){
     .cover-box{
         width: calc(100% / 1 - 30px);
         margin: 15px;
