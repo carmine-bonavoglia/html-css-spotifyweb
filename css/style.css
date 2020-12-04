@@ -101,10 +101,8 @@ a{
 .menu-navbar ul li a.crea-playlist::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f067";
-    font-style: solid;
     font-weight: 900;
     display: inline-block;
-    -webkit-font-smoothing: antialiased;
     color: black;
     background-color: white;
     font-size: 1.2em;
@@ -148,10 +146,8 @@ a{
 .user-navbar a.install-app::before{
     font-family: "Font Awesome 5 Free"; 
     content: "\f0ab";
-    font-style: solid;
     font-weight: 900;
     display: inline-block;
-    -webkit-font-smoothing: antialiased;
     color: white;
     font-size: 1em;
     padding: 0 10px;
@@ -165,10 +161,8 @@ a{
 .user-navbar a.user-logo::before{ 
     font-family: "Font Awesome 5 Free"; 
     content: "\f2bd";
-    font-style: solid;
     font-weight: 900;
     display: inline-block;
-    -webkit-font-smoothing: antialiased;
     font-size: 2em;
     padding: 0 10px;
     vertical-align: middle;
@@ -304,12 +298,12 @@ a.button-upgrade{
 }
 
 .cover-box{
-    margin: 30px;
+    width: calc(100% / 6 - 30px);
+    margin: 15px;
 }
 
-.box{
-    width: 200px;
-    height: 200px;
+.cover-box img{
+    width: 100%;
 }
 /* /Last Played */
 
@@ -329,31 +323,53 @@ footer{
 /* /Footer */
 
 /* Media Query */
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px){
+    .cover-box{
+        width: calc(100% / 1 - 30px);
+        margin: 15px;
+    }
+
+    .call-to-action{
+        display: none;
+    }
+
+    .main-content{
+        padding-top: 0;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    
+@media only screen and (min-width: 600px){
+    .cover-box{
+        width: calc(100% / 1 - 30px);
+        margin: 15px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 992px) {
-    
+@media only screen and (min-width: 768px) {
+    .cover-box{
+        width: calc(100% / 2 - 30px);
+        margin: 15px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
-
-
+    .cover-box{
+        width: calc(100% / 4 - 30px);
+        margin: 15px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .cover-box{
+        width: calc(100% / 6 - 30px);
+        margin: 15px;
+    }
 } 
 
 /* /Media Query */
