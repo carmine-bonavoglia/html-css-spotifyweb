@@ -178,7 +178,7 @@ a{
 
 /* Main content */
 .main-content{
-    height: 900px; /* Da sistemare al 100% */
+    height: 100%; /* Da sistemare al 100% */
     width: calc(100% - 250px);
     margin-left: 250px;
     padding-top: 100px;
@@ -230,14 +230,10 @@ a.button-upgrade{
     text-align: center;
 }
 
-.main-menu ul{
-}
-
 .main-menu ul li{
     padding: 20px 0px;
     position: relative;
 }
-
 
 .main-menu ul li a{
     text-transform: uppercase;
@@ -259,8 +255,64 @@ a.button-upgrade{
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
-
 }
+
+/* Last Played */
+#last-played h2, h4, p,
+#user h2, h4, p,
+#popular h2, h4, p{
+    color: white;
+    padding-top: 10px;
+}
+
+#last-played h2,
+#user h2,
+#popular h2{
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+#last-played p,
+#user p,
+#popular p{
+    font-weight: 600;
+    font-size: 0.8em;
+    opacity: 65%;
+}
+
+#last-played{
+    width: calc(100%);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.cover-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-list{
+    display: block;
+    list-style: none;
+    display: flex;
+}
+
+.cover-box{
+    margin: 30px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+}
+/* /Last Played */
+
+
+
 /* /Main Content */
 
 /* Footer */
@@ -286,13 +338,15 @@ footer{
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     
+
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
