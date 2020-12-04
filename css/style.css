@@ -280,7 +280,9 @@ a.button-upgrade{
     opacity: 65%;
 }
 
-#last-played{
+#last-played,
+#user,
+#popular{
     width: calc(100%);
     padding: 15px;
     display: flex;
