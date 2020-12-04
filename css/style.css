@@ -259,11 +259,16 @@ a.button-upgrade{
     padding-top: 10px;
 }
 
+#last-played h4, p,
+#user h4, p,
+#popular h4, p{
+    text-align: center;
+}
+
 #last-played h2,
-#user h2,
-#popular h2{
-    padding-bottom: 30px;
-    padding-left: 30px;
+.text-user{
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 
 #last-played p,
@@ -273,6 +278,13 @@ a.button-upgrade{
     font-size: 0.8em;
     opacity: 65%;
 }
+
+#last-played p.small,
+#user p.small,
+#popular p.small{
+    font-size: 0.7em;
+}
+
 
 #last-played,
 #user,
@@ -299,17 +311,50 @@ a.button-upgrade{
 
 .cover-box{
     width: calc(100% / 6 - 30px);
+    height: 100%;
     margin: 15px;
+    position: relative;
 }
 
 .cover-box img{
     width: 100%;
 }
+
+.cover-box img:hover{
+    opacity: 30%;
+}
+
+.cover-box img:hover::after{
+    content: "\f144";
+    display: block;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    color: white;
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    /* content:'';
+    width: 40px;
+    height: 2px;
+    background-color: lime;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+li .circle{
+    border-radius: 50%;
+}
+
 /* /Last Played */
 
-
-
 /* /Main Content */
+
 
 /* Footer */
 footer{
