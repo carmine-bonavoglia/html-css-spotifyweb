@@ -48,6 +48,8 @@ a{
 /* /Classi riutilizzabili */
 
 /* Barra laterale */
+
+/* Hidden XS */
 .left-bar{
     width: 250px;
     height: calc(100% - 100px);
@@ -168,6 +170,68 @@ a{
     vertical-align: middle;
 }
 
+/* /Hidden XS */
+
+
+/* Visible XS */
+
+.left-bar-xs{
+    width: 60px;
+    height: calc(100% - 100px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.menu-navbar-xs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-navbar-xs ul li img{
+    padding: 10px;
+    width: 250%;
+}
+
+.menu-navbar-xs ul li a img{
+    opacity: 65%;
+    color: white;
+    border-left: 2px solid transparent;
+}
+
+.menu-navbar-xs ul li a img:hover{
+    border-left: 2px solid lime;
+    opacity: 100%;
+}
+
+.user-navbar-xs ul li{
+    margin-bottom: 15px;
+}
+
+.user-navbar-xs a.install-app{
+    opacity: 65%;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.user-navbar-xs a.install-app:hover{
+    opacity: 100%;
+}
+
+.user-navbar-xs a.user-logo{
+    font-size: 30px;
+    padding: 0 15px;
+}
+
+.user-navbar-xs a.user-logo:hover{
+    color: lime;
+}
+/* /Visible XS */
 /* /Barra Laterale */
 
 /* Main content */
@@ -314,6 +378,7 @@ a.button-upgrade{
 
 .position-img{
     position: relative;
+    display: flex;
 }
 
 .layover-img{
@@ -322,7 +387,7 @@ a.button-upgrade{
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 50px;
+    font-size: 5em;
     color: white;
     opacity: 0%;
     display: flex;
@@ -333,10 +398,6 @@ a.button-upgrade{
 .layover-img:hover{
     opacity: 100%;
     background-color:  rgba(0, 0, 0, 0.75);
-}
-
-.layover-img .fas{
-    height: 50px;
 }
 
 .cover-box img:hover{
@@ -385,7 +446,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 600px) and (max-height: 350px){
+@media only screen and (max-width: 600px){
     .cover-box{
         width: calc(100% / 1 - 30px);
         margin: 15px;
@@ -398,13 +459,26 @@ footer{
     .main-content{
         padding-top: 0;
     }
+
+    .left-bar{
+        display: none;
+    }
+
+    .main-content{
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 601px){
     .cover-box{
         width: calc(100% / 1 - 30px);
         margin: 15px;
+    }
+
+    .left-bar-xs{
+        display: none;
     }
 }
 
@@ -414,6 +488,10 @@ footer{
         width: calc(100% / 2 - 30px);
         margin: 15px;
     }
+    
+    .left-bar-xs{
+        display: none;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -422,6 +500,10 @@ footer{
         width: calc(100% / 4 - 30px);
         margin: 15px;
     }
+    
+    .left-bar-xs{
+        display: none;    
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -429,6 +511,10 @@ footer{
     .cover-box{
         width: calc(100% / 6 - 30px);
         margin: 15px;
+    }
+    
+    .left-bar-xs{
+        display: none;
     }
 } 
 
