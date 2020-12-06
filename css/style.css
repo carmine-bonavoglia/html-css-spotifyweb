@@ -116,7 +116,7 @@ a{
 .playlist-navbar{
     flex-grow: 1;
     min-height: 150px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .playlist-navbar ul li a{
