@@ -16,36 +16,12 @@ main{
     display: flex;
 }
 
-
-/* Classi riutilizzabili */
-.arancio{
-    background-color: coral;
-}
-
-.verde{
-    background-color: lime;
-}
-
-.celeste{
-    background-color: aqua;
-}
-
-.giallo{
-    background-color: yellow;
-}
-
-.turchese{
-    background-color: mediumturquoise;
-}
-
 a{
     color: white;
     text-decoration: none;
     font-size: 0.8em;
     font-weight: 600;
 }
-
-/* /Classi riutilizzabili */
 
 /* Barra laterale */
 
@@ -195,7 +171,7 @@ a{
 
 .menu-navbar-xs ul li img{
     padding: 10px;
-    width: 250%;
+    height: 50px;
 }
 
 .menu-navbar-xs ul li a img{
