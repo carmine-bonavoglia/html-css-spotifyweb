@@ -226,13 +226,13 @@ a{
 .call-to-action{
     width: calc(100% - 250px);
     height: 100px;
-    line-height: 100px;
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
     text-align: right;
+    display: block;
 }
 
 .call-to-action .button-upgrade{
@@ -241,19 +241,22 @@ a{
     padding: 10px 30px;
     border-radius: 20px;
     margin-right: 2%;
+    margin-top: 2%;
+    vertical-align: middle;
 }
 
 .call-to-action .button-upgrade:hover{
     background-color: white;
     color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(0, 0, 0, 0.75);
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 a.button-upgrade{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.8em;
+    display: inline-block;
 }
 
 .main-content .main-menu ul li{
